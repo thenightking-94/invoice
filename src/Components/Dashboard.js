@@ -108,7 +108,7 @@ const Dashboard = (props) => {
                 </Pdf>
             </Grid>
 
-            <span id='footer'>Invoice component</span>
+            
         </div>
     );
 
