@@ -5,9 +5,10 @@
 3. An smart feature designed is activating the "generate-pdf" button with the help of computed react-hooks state only when user has entered details in all of the required fields. This has been achieved by simply checking the data stored as value in the input DOM elements.
 Attaching a code snippet of the method :
 
+/*switch button to activate pdf generation, when all the data fields have been filled up*/
 
 
-//switch button to activate pdf generation, when all the data fields have been filled up
+
     const calvalue = () => {
         var el = document.querySelectorAll("input[id='data']");
         var valuedata = [];
