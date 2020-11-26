@@ -35,3 +35,5 @@ Attaching a code snippet of the method :
 
 4. Any performance issue in production can be tracked using test-scripts, Network recording the API data fetch timing. QA team is responsible of such measures.
 5. Libraries used in addition to react---> Redux , Material-UI (to make device responsiveness), react-to-pdf (pdf generation).
+
+Deployed link : https://invoice-generator-pdf.vercel.app
