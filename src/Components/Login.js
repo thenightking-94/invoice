@@ -5,7 +5,7 @@ import { Typography } from '@material-ui/core';
 import '../CSS/allcss.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { Store } from './ReduxComp';
+import { Store } from '../index';
 require('dotenv').config()
 
 const style = {
@@ -22,7 +22,6 @@ function Login() {
     const onSuccess = (response) => {
         var profile = response.getBasicProfile();
         dispatch({ type: 'LOGGEDIN', email: profile.getEmail(), name: profile.getName(), img: profile.getImageUrl() });
-        localStorage.setItem('name_user', profile.getName());
         console.log(Store.getState())
         refreshTokenSetup(response);
     };
@@ -30,6 +29,7 @@ function Login() {
     useEffect(() => {
         localStorage.setItem('img_url', Img);
         localStorage.setItem('email_id', Email);
+        localStorage.setItem('name_user', Name);
     }, [Name, Img, Email])
 
     const onFailure = (response) => {

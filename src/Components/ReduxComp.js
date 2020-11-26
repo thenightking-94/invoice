@@ -1,12 +1,10 @@
-import { createStore } from 'redux';
-
-const state = {
+const initialState = {
     name: '',
     email: '',
     img: ''
 };
 
-const reducer_method = (state, action) => {
+const rootReducer = (state = initialState, action) => {
     if (action.type == 'LOGGEDIN')
         return ({ ...state, email: action.email, name: action.name, img: action.img });
     return state;
@@ -14,7 +12,4 @@ const reducer_method = (state, action) => {
 
 
 
-const Store = createStore(reducer_method, state);
-export { Store };
-
-console.log(Store.getState())
+export default rootReducer;
